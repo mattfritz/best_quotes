@@ -3,7 +3,7 @@ require './config/application'
 use Rack::Reloader, 0
 use Rack::ContentLength
 
-Rack::Handler::Thin.run(
+Rack::Handler::WEBrick.run(
   BestQuotes::Application.new,
   :Port =>3001
 )
