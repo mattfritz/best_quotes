@@ -4,4 +4,9 @@ gem 'rulers', :path => "../rulers"
 gem 'rack', '~> 1.5.2'
 
 gem 'thin'
-gem 'pry-debugger'
+
+group :development do
+  gem 'rerun'
+  gem 'listen'
+  gem 'pry-debugger'
+end
