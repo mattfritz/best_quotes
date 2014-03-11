@@ -1,11 +1,15 @@
+PATH
+  remote: ../rulers
+  specs:
+    rulers (0.0.2)
+      rack (~> 1.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
     daemons (1.1.9)
     eventmachine (1.0.3)
     rack (1.5.2)
-    rulers (0.0.2)
-      rack (~> 1.5)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -16,5 +20,5 @@ PLATFORMS
 
 DEPENDENCIES
   rack (~> 1.5.2)
-  rulers
+  rulers!
   thin
