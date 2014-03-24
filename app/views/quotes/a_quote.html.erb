@@ -2,6 +2,8 @@
   There is nothing either good or bad but <%= noun %> makes it so
 </p>
 
-<p>
-  Ruby version <%= RUBY_VERSION %>
-</p>
+<div>
+  <div>ENV Variables:</div> 
+  <div>User Agent: <%= env[HTTP_USER_AGENT]  %></div>
+  <div>Server Software: <%= env[SERVER_SOFTWARE]  %></div>
+</div>
