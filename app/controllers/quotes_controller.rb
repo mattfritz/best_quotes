@@ -1,6 +1,8 @@
 class QuotesController < Rulers::Controller
   def a_quote
-    render :a_quote, noun: :winking
+    @test = "this is a working test"
+    @noun = "winking"
+    render :a_quote 
   end
 
   def exception
