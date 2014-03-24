@@ -5,6 +5,11 @@ class QuotesController < Rulers::Controller
     render :a_quote 
   end
 
+  def quote_1
+    @quote = Rulers::Model::FileModel.find(1)
+    render :quote
+  end
+
   def exception
     raise "It's a bad one!"
   end
