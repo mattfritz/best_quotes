@@ -6,7 +6,7 @@ class QuotesController < Rulers::Controller
   end
 
   def quote_1
-    @quote = Rulers::Model::FileModel.find(1)
+    @quote = FileModel.find(1)
     render :quote
   end
 
