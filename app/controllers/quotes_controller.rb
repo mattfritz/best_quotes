@@ -14,6 +14,12 @@ class QuotesController < Rulers::Controller
     render :quote
   end
 
+  def update_quote
+    raise "NOT A POST!" unless env["REQUEST_METHOD"] == "POST"
+    @params = request.params
+    FileModel.update(@params["id"], @params["attribs"])
+  end
+
   def a_quote
     @test = "this is a working test"
     @noun = "winking"
