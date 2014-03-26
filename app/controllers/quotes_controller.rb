@@ -4,6 +4,16 @@ class QuotesController < Rulers::Controller
     render :index
   end
 
+  def new_quote
+    attrs = {
+      "submitter" => "web user",
+      "quote" => "A picture is worth one k pixels",
+      "attribution" => "Me" 
+    }
+    @quote = FileModel.create(attrs)
+    render :quote
+  end
+
   def a_quote
     @test = "this is a working test"
     @noun = "winking"
