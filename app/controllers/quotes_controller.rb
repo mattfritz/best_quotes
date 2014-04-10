@@ -26,6 +26,12 @@ class QuotesController < Rulers::Controller
     render :a_quote 
   end
 
+  def quotes_by
+    @params = request.params
+    @quotes = FileModel.find_all_by_submitter(@params["attribs"])
+    render :index
+  end
+
   def quote_1
     @quote = FileModel.find(1)
     render :quote
