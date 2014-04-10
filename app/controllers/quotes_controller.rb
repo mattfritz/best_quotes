@@ -32,6 +32,12 @@ class QuotesController < Rulers::Controller
     render :index
   end
 
+  def method_missing_test
+    @params = request.params
+    @quotes = FileModel.find_all_by_attribution(@params["attribs"])
+    render :index
+  end
+
   def quote_1
     @quote = FileModel.find(1)
     render :quote
